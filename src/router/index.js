@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import base from './modules/base';
 
 Vue.use(Router)
 
@@ -21,6 +22,7 @@ export default new Router({
     }, {
       path: '*',
       component: () => import('@/views/error.vue')
-    }
+    },
+    ...base,
   ]
 })
