@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import base from './modules/base';
+import vuex from './modules/vuex';
 
 Vue.use(Router)
 
@@ -24,5 +25,6 @@ export default new Router({
       component: () => import('@/views/error.vue')
     },
     ...base,
+    ...vuex,
   ]
 })
