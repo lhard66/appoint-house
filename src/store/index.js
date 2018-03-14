@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import * as actions from './actions';
 import * as mutations from './mutations';
 import * as getters from './getters';
+import advance from './modules/advance';
 
 Vue.use(Vuex);
 
@@ -15,4 +16,7 @@ export default new Vuex.Store({
   getters,
   actions,
   mutations,
+  modules: {
+    advance,
+  }
 })
